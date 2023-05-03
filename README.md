@@ -3,7 +3,7 @@
 
 
 
-Clocerto Playground is a development repo for the Clocerto CLojure Library for the Concerto by the Accord Project.
+Clocerto Playground is a development repo for the Clocerto CLojure Library for the Concerto model language by the Accord Project.
 
 
 <img src="https://raw.githubusercontent.com/tbrooke/clocerto-playground/master/assets/img/malli.png" width=130 align="right"/>
