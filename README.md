@@ -1,10 +1,12 @@
 
 # CLOCERTO PLAYGROUND
 
-
+  
 <h2>    
 <hr style="opacity:0">
-Clocerto Playground is a development repo for the Clocerto Clojure Library. It is a library that allows for use of the Concerto model language by the Accord Project in Clojure projects.
+Clocerto Playground is a development repo for the Clocerto Clojure Library. It is a library that allows for use of the Concerto model language by the Accord Project in Clojure projects. It is organized with subdirectories for both nbb and Babashka to allow for experminataion with eachof these tools. 
+Also it has 
+<a href="https://github.com/tbrooke/clocerto-playground/tree/main/library#readme"> Library</a> of Accord Project templates and models for use.
 <hr style="opacity:0">
 </h2>
 
