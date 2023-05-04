@@ -136,9 +136,8 @@ concept Person identified by email {
 }
 ```
 
-
 <h1>
-<a href="https://www.accordproject.org/projects/concerto">
+<a href="https://github.com/metosin/malli">
 <hr>
 Malli
 </a>
