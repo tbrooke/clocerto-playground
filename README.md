@@ -4,7 +4,7 @@
 
 <h2>    
 <hr style="opacity:0">
-Clocerto Playground is a development repo for the Clocerto Clojure Library for the Concerto model language by the Accord Project.
+Clocerto Playground is a development repo for the Clocerto Clojure Library. It is a library that allows for use of the Concerto model language by the Accord Project in Clojure projects.
 <hr style="opacity:0">
 </h2>
 
@@ -138,7 +138,6 @@ concept Person identified by email {
 
 
 <h1>
-<hr style="opacity:0">
 <a href="https://www.accordproject.org/projects/concerto">
 <hr>
 Malli
