@@ -155,22 +155,22 @@ Data-driven Schemas for Clojure/Script and [babashka](#babashka).
 <img src="https://raw.githubusercontent.com/metosin/malli/master/docs/img/malli.png" width=130 align="right"/>
 
 - Schema definitions as data
-- [Vector](#vector-syntax), [Map](#map-syntax) and [Lite](#lite) syntaxes
-- [Validation](#validation) and [Value Transformation](#value-transformation)
-- First class [Error Messages](#error-messages) with [Spell Checking](#spell-checking)
-- [Generating values](#value-generation) from Schemas
-- [Inferring Schemas](#inferring-schemas) from sample values and [Destructuring](#destructuring).
-- Tools for [Programming with Schemas](#programming-with-schemas)
-- [Parsing](#parsing-values), [Unparsing](#unparsing-values) and [Sequence Schemas](#sequence-schemas)
-- [Persisting schemas](#persisting-schemas), even [function schemas](#serializable-functions)
-- Immutable, Mutable, Dynamic, Lazy and Local [Schema Registries](#schema-registry)
-- [Schema Transformations](#schema-Transformation) to [JSON Schema](#json-schema), [Swagger2](#swagger2), and [descriptions in english](#description)
-- [Multi-schemas](#multi-schemas), [Recursive Schemas](#recursive-schemas) and [Default values](#default-values)
-- [Function Schemas](docs/function-schemas.md) with dynamic and static schema checking
-   - Integrates with both [clj-kondo](#clj-kondo) and [Typed Clojure](#static-type-checking-via-typed-clojure) 
-- Visualizing Schemas with [DOT](#dot) and [PlantUML](#plantuml)
-- Pretty [development time errors](#pretty-errors)
-- [Fast](#performance)
+- Vector, Map and Lite syntaxes
+- Validation and Value Transformation
+- First class Error Messages with Spell Checking
+- Generating values from Schemas
+- Inferring Schemas from sample values and Destructuring.
+- Tools for Programming with Schemas
+- Parsing, Unparsing and Sequence Schemas
+- Persisting schemas, even function schemas
+- Immutable, Mutable, Dynamic, Lazy and Local Schema Registries
+- Schema Transformations to JSON Schema, Swagger2, and descriptions in english
+- Multi-schemas, Recursive Schemas(and Default values
+- Function Schemas with dynamic and static schema checking
+   - Integrates with both clj-kondo and Typed Clojure
+- Visualizing Schemas with DOT and PlantUML
+- Pretty development time errors
+- Fast
 
 
 
