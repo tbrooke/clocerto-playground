@@ -1,0 +1,50 @@
+{
+    "$class": "concerto.metamodel@1.0.0.Model",
+    "declarations": [
+        {
+            "$class": "concerto.metamodel@1.0.0.ConceptDeclaration",
+            "isAbstract": false,
+            "name": "Address",
+            "properties": [
+                {
+                    "$class": "concerto.metamodel@1.0.0.StringProperty",
+                    "isArray": false,
+                    "isOptional": false,
+                    "name": "street"
+                }
+            ]
+        },
+        {
+            "$class": "concerto.metamodel@1.0.0.ConceptDeclaration",
+            "isAbstract": false,
+            "name": "Person",
+            "properties": [
+                {
+                    "$class": "concerto.metamodel@1.0.0.StringProperty",
+                    "isArray": false,
+                    "isOptional": false,
+                    "name": "name"
+                },
+                {
+                    "$class": "concerto.metamodel@1.0.0.IntegerProperty",
+                    "isArray": false,
+                    "isOptional": false,
+                    "name": "age"
+                },
+                {
+                    "$class": "concerto.metamodel@1.0.0.ObjectProperty",
+                    "isArray": false,
+                    "isOptional": true,
+                    "name": "adress",
+                    "type": {
+                        "$class": "concerto.metamodel@1.0.0.TypeIdentifier",
+                        "name": "Address"
+                    }
+                }
+            ]
+        }
+    ],
+    "decorators": [],
+    "imports": [],
+    "namespace": "org.acme@1.0.0"
+}
