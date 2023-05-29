@@ -5,16 +5,21 @@
 
 
 (c/read-ast (io/file "src/person.json"))
-(read-ast (io/file "library/ast/metamodel.json"))
-;; (read-ast (io/file "library/ast/money@0.2.0.ast.json"))
 
 ;; remove location from the AST - It is no longer used
+;; This can be done from the command line
 
 (defn clean [data]
   (clojure.walk/prewalk (fn [node] (if (map? node)
                                      (apply dissoc node [:location])
                                      node))
                         data))
+
+
+
+(c/read-ast (clean (io/file "library/ast/metamodel.json")))
+(def metamodel (c/read-ast  (clean (io/file "library/ast/metamodel@1.0.0.ast.json"))))
+metamodel
 
 ;;
 ;; Large models cicerodom and ciceromark
@@ -30,12 +35,11 @@
 
 
 
-;; transform Concerto file
+;; transform Concerto metamodel file
 
 (def metamodel (c/transform (clean (c/read-ast (io/file "library/ast/metamodel.json"))))))
 
 metamodel
-
 
 
 
@@ -54,9 +58,19 @@ person
      ;; => #object[clojure.lang.Var$Unbound 0x2c2a5b99 "Unbound: #'playground/contract"]
  (c/transform (c/read-ast (io/file "library/ast/contract@0.2.0.ast.json"))))
 
+;; Experiments with merge
+
+(require '[malli.util :as mu])
+
+
 (def bond
- (c/transform (c/read-ast
- (io/file "library/ast/bond@0.3.0.ast.json"))))
+ (let [bond (c/read-ast
+             (io/file "library/ast/bond@0.3.0.ast.json"))
+       metamodel (c/read-ast (io/file "library/ast/metamodel@1.0.0.ast.json"))]
+   (mu/-merge bond metamodel)))
+
+(def metabond
+  ())
 
 ;; No matching clause: concerto.metamodel@1.0.0.AssetDeclaration
 

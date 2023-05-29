@@ -75,6 +75,13 @@
         (println
          (str directories " directories, " (- total directories) " files"))))))
 
+(defn parse-tree 
+  [dir]
+  (let [ path (io/file dir)
+         tree (file-tree path)]tree))
+
+(parse-tree dir)
+
 (apply -main *command-line-args*)
 
 ;;;; Scratch
@@ -87,14 +94,26 @@
   (deps/add-deps '{:deps {metosin/malli {:mvn/version "0.9.0"}}})
 
 (require '[malli.core :as malli])
+  
+(ns bb-malli
+  (:require [babashka.deps :as deps]))
+
+(deps/add-deps '{:deps {metosin/malli {:mvn/version "0.9.0"}}})
+
+(require '[malli.core :as malli])
+
+
+
 
   (shell "ls" "-la")
+
   
   (shell {:dir ""} "ls" "-la")
   
 
   (def dir "/Users/tmb/coding/Accord/models/src/")
   
+ (file-tree )
 
   (def model "geo.cto")
   
@@ -102,12 +121,13 @@
 
   (:out (shell {:out :string} "concerto parse --model" (str dir model))))
 
-(get-model "geo.cto")
+(get-model "time.cto")
   
   (edn/read-string (get-model "geo.cto"))
   
 
   (-main dir "concerto parse --model" (str dir model) "--edn" )
+
 
  (def geo (get-model "geo.cto")) 
   geo
